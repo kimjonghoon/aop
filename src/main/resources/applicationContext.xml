@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!-- 
+	<aop:aspectj-autoproxy />
+
+	<bean id="testLogger" class="net.java_school.commons.TestLogger" />
+	
+	<bean id="bankUi" class="net.java_school.bank.BankUi">
+		<property name="stream" value="#{T(System).out}" />
+		<property name="bank" ref="shinhanBank" />
+	</bean>
+
+	<bean id="shinhanBank" class="net.java_school.bank.ShinhanBank">
+		<property name="dao" ref="shinhanBankDao" />
+	</bean>
+
+	<bean id="shinhanBankDao" class="net.java_school.bank.ShinhanBankDao">
+	</bean>
+ -->
+</beans>
