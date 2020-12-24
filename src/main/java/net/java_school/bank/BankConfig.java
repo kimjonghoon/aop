@@ -17,12 +17,12 @@ public class BankConfig {
 
 	@Bean
 	public BankDao shinhanBankDao() {
-		return new ShinhanBankDao();
+		return new MyBankDao();
 	}
 
 	@Bean
 	public Bank shinhanBank() {
-		Bank bank = new ShinhanBank();
+		Bank bank = new MyBank();
 		bank.setDao(shinhanBankDao());
 		return bank;
 	}

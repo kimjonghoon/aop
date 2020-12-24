@@ -1,27 +1,23 @@
 package net.java_school.bank;
 
-import java.io.Serializable;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Account implements Serializable {
+public class Account {
 
-	private static final long serialVersionUID = -5057730879985103696L;
 	private String accountNo;
 	private String name;
-	protected long balance;
+	protected double balance;
 	private String kind;
 	protected List<Transaction> transactions = new ArrayList<Transaction>();
 
-	static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy/MM/dd");
+	static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy");
 	static final SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("HH:mm:ss");
 	static final String DEPOSIT = "DEPOSIT";
 	static final String WITHDRAW = "WITHDRAW";
 	static final String NORMAL = "NORMAL";
 	static final String MINUS = "MINUS";
-	static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance();
 
 	public Account() {}
 
@@ -47,11 +43,11 @@ public class Account implements Serializable {
 		this.accountNo = accountNo;
 	}
 
-	public long getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 
-	public void setBalance(long balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 

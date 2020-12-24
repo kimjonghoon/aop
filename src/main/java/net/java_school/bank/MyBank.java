@@ -2,9 +2,8 @@ package net.java_school.bank;
 
 import java.util.List;
 
-public class ShinhanBank implements Bank {
+public class MyBank implements Bank {
 
-	private static final long serialVersionUID = -1317940306920472056L;
 	private BankDao dao;
 
 	public void setDao(BankDao dao) {
@@ -31,17 +30,17 @@ public class ShinhanBank implements Bank {
 	}
 
 	@Override
-	public void deposit(String accountNo, long amount) {
+	public void deposit(String accountNo, double amount) {
 		dao.deposit(accountNo, amount);
 	}
 
 	@Override
-	public void withdraw(String accountNo, long amount) {
+	public void withdraw(String accountNo, double amount) {
 		dao.withdraw(accountNo, amount);
 	}
 
 	@Override
-	public void transfer(String from, String to, long amount) {
+	public void transfer(String from, String to, double amount) {
 		dao.withdraw(from, amount);
 		dao.deposit(to, amount);
 	}
